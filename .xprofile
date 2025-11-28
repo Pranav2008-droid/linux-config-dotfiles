@@ -1,0 +1,6 @@
+feh --bg-fill --randomize Pictures/wallpapers
+
+picom --config ~/.config/picom/picom.conf --daemon
+
+~/.config/autostart/autostart.sh
+xmodmap ~/.Xmodmap
