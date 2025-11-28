@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/pranavr/Pictures/wallpapers/7.jpg' '/home/pranavr/Pictures/wallpapers/2.jpg' '/home/pranavr/Pictures/wallpapers/5.jpg' '/home/pranavr/Pictures/wallpapers/6.jpg' 
