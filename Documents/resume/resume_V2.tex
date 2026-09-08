@@ -1,0 +1,210 @@
+\documentclass[11pt,letterpaper]{extarticle}
+
+% -------------------------------------------------
+% Packages
+% -------------------------------------------------
+\usepackage[margin=0.55in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{tabularx}
+\usepackage{array}
+
+% -------------------------------------------------
+% General Formatting
+% -------------------------------------------------
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+
+\usepackage{xcolor}
+
+\definecolor{linkcolor}{RGB}{0,90,180}
+
+\hypersetup{
+    colorlinks=true,
+    urlcolor=linkcolor,
+    linkcolor=linkcolor
+}
+
+% -------------------------------------------------
+% Compact Lists
+% -------------------------------------------------
+\setlist[itemize]{
+    leftmargin=2.5em,
+    labelsep=0.3em,
+    itemsep=0pt,
+    topsep=4pt,
+    parsep=0pt,
+    partopsep=0pt
+}
+
+% -------------------------------------------------
+% Section Formatting
+% -------------------------------------------------
+\titleformat{\section}
+    {\Large\bfseries}
+    {}
+    {0em}
+    {}
+    [\vspace{-2pt}\titlerule]
+
+\titlespacing{\section}
+    {0pt}{3pt}{1pt}
+
+% -------------------------------------------------
+% Custom Commands
+% -------------------------------------------------
+\newcommand{\project}[2]{%
+    \vspace{15pt}
+    \textbf{\large#1} \hfill \textit{#2}\\[-15pt]
+}
+
+\newcommand{\linkedproject}[4]{%
+    \vspace{10pt}
+    \textbf{\large #2}~{\small\href{#1}{[#4]}}
+    \hfill
+    \textit{#3}\\[-15pt]
+}
+
+\newcommand{\education}[4]{%
+    \textbf{#1} \hfill \textit{#2}\\[-2pt]
+    #3 \hfill #4\\[-10pt]
+}
+
+% -------------------------------------------------
+% Document
+% -------------------------------------------------
+\begin{document}
+
+% -------------------------------------------------
+% Header
+% -------------------------------------------------
+\begin{center}
+    {\LARGE\bfseries PRANAV RAMESH}\\[1pt]
+    Waterloo, Ontario \,|\, 
+    \href{mailto:pranavrameshk@gmail.com}{pranavrameshk@gmail.com}
+    \,|\, +1 XXX-XXX-XXXX\\[-1pt]
+    \href{https://www.linkedin.com/in/pranav-ramesh-1a1708413/}{LinkedIn}
+    \,|\, 
+    \href{https://github.com/Pranav2008-droid}{GitHub}
+\end{center}
+
+% -------------------------------------------------
+% Education
+% -------------------------------------------------
+\section{Education}
+
+\education
+    {University of Waterloo}
+    {Waterloo, ON}
+    {Bachelor of Applied Science in Computer Engineering, Co-operative Program}
+    {Expected 2031}
+
+\education
+    {VIBGYOR High School, Horamavu}
+    {Bengaluru, India}
+    {CBSE Class XII: 96.2\%}
+    {}
+
+% -------------------------------------------------
+% Technical Skills
+% -------------------------------------------------
+\section{Technical Skills}
+
+\begin{tabularx}{\textwidth}{@{}>{\bfseries}p{1.7in}X@{}}
+Programming &
+    C/C++, Python, JavaScript, React, React Native, MySQL \\[3pt]
+
+Embedded 
+Systems &
+ESP32, Raspberry Pi, Embedded C/C++,Interfacing,
+IoT connectivity, Firebase \\[3pt]
+
+Electronics &
+Digital/Power Electronics, PCB Design ,
+high-frequency switching, gate-drive design\\[3pt]
+
+Development &
+Linux, Git/GitHub, Vim, circuit simulation, hardware debugging \\[3pt]
+
+Hardware &
+    PCB prototyping, soldering, oscilloscopes, multimeters, circuit debugging\\[5pt]
+\end{tabularx}
+
+% -------------------------------------------------
+% Projects
+% -------------------------------------------------
+\section{Projects}
+
+\linkedproject
+    {https://github.com/Pranav2008-droid/PLL-SSTC}
+    {Phase Locked Loop Solid-State Tesla Coil}
+    {2022 -- Present}
+    {GitHub}
+
+\begin{itemize}
+    \item Designed a 1--2\,kW PLL SSTC targeting 250\,kHz with a 325\,VDC full-bridge power stage.
+    \item Designed multi-layer KiCad PCBs and schematics for digital logic, gate drive and power switching.
+    \item Programmed an Attiny85 in C++ to process MIDI files and generate amplitude-modulated output.\href{https://youtube.com/shorts/cHrE9xm2R9Q}{[Demo]}
+\end{itemize}
+
+\linkedproject
+    {https://github.com/Pranav2008-droid/farmerhelper}
+    {FarmerHelper -- Remote IoT Irrigation System}
+    {2020 -- 2024}
+    {GitHub}
+
+\begin{itemize}
+    \item Designed and deployed an IoT irrigation system running continuously on an agricultural installation.
+    \item Programmed a cellular ESP32 to control valves and  motor pump while synchronizing with Firebase.
+    \item Built a React Native app with Firebase Authentication, Realtime Database, and OTP authentication.
+    \item Implemented regional-language support using an extensible multi-language application architecture.
+\end{itemize}
+
+\linkedproject
+    {https://timesofindia.indiatimes.com/life-style/spotlight/young-student-innovators-from-bengaluru/articleshow/65855901.cms}
+    {Smart Cars -- Featured in The Times of India}
+    {2018}
+    {Article}
+
+\begin{itemize}
+    \item Featured in The Times of India's ``Young Student Innovators'' and invited by Freudenberg to present the project.
+    \item Built Wi-Fi-controlled smart cars using Raspberry Pi with live video streaming. 
+    \item Integrated sensing, control, and video streaming into a mobile robotics platform.
+\end{itemize}
+
+\linkedproject
+    {https://github.com/Pranav2008-droid/home-security}
+    {AI Home Intrusion Detection System}
+    {2019}
+    {GitHub}
+
+\begin{itemize}
+    \item Built a Raspberry Pi security system combining IR motion detection with AI facial recognition to flag unauthorized access.
+\end{itemize}
+
+\project
+    {Automated Home Water Management System}
+    {2016 -- 2018}
+
+\begin{itemize}
+    \item Designed a water level controller using embedded C++ to prevent water wastage. 
+\end{itemize}
+
+% -------------------------------------------------
+% Activities & Achievements
+% -------------------------------------------------
+\section{Activities \& Achievements}
+
+\begin{itemize}
+    \item Inline speed skating: Won 2 District Championship gold medals, qualified nationally, and placed 11th at a semi-national competition.
+    \item Designed and taught IoT/electronics workshops for university and school students and at an orphanage.
+    \item Model United Nations delegate -- developed public speaking, negotiation, and leadership skills through committee sessions.
+    \item Long distance cycling: Cycled 200km in 8 hours after extensive training and persevering. 
+\end{itemize}
+
+\end{document}
